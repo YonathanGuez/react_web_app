@@ -18,6 +18,9 @@ export class Menu extends Component {
             <NavLink className="d-inline p-2 bg-dark text-white" to="/contact">
               Contact
             </NavLink>
+            <NavLink className="d-inline p-2 bg-dark text-white" to="/grid">
+              Tableau
+            </NavLink>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
