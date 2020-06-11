@@ -1,6 +1,6 @@
 # react_web_app
 
-test react native
+Learn react for website
 
 ## Config Vscode
 
@@ -48,10 +48,62 @@ user Settings:
 
 ```
 
-## Creation :
+## How to use react :
+
+### Creation Project:
 
 ```
 npx create-react-app apptest
 cd apptest
-npm start
+yarn start
+```
+
+### Add bootstrap and use Button:
+
+index.js :
+
+```
+import 'bootstrap/dist/css/bootstrap.css';
+```
+
+ex : src/App.js:
+
+```
+import Button from 'react-bootstrap/Button';
+<Button variant="primary">test</Button>
+```
+
+### Add component:
+
+create folder components links src/components/:
+create in components file Home.js:
+
+```
+import React, { Component } from 'react';
+
+export class Home extends Component {
+  render() {
+    return (
+      <div className="mt-5 d-flex justify-content-left">
+        <h3>dataaaaaaa</h3>
+      </div>
+    );
+  }
+}
+
+```
+
+use this component Home :
+
+1. go to src/App.js:
+   import Home
+
+```
+import { Home } from './components/Home';
+```
+
+2. add my new component:
+
+```
+<Home></Home>
 ```
