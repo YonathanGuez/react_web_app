@@ -261,3 +261,19 @@ export class Grid extends Component {
 }
 
 ```
+
+### Add Get API :
+
+Get API for Backend:
+and replace this.refreshList(); by fetch
+
+```
+componentDidMount() {
+  fetch('http://localhost:3000/api/gird')
+  .then(res => res.json())
+  .then((data) => {
+    this.setState({ deps: data })
+  })
+  .catch(console.log)
+}
+```
