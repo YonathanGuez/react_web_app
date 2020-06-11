@@ -150,4 +150,65 @@ http://localhost:3000/
 http://localhost:3000/profile
 ```
 
-#### Create Menu :
+### Create Menu :
+
+1. create Menu navigation into components :
+
+```
+import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
+import { Navbar, Nav } from 'react-bootstrap';
+
+export class Menu extends Component {
+  render() {
+    return (
+      <Navbar bg="dark" expand="lg">
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav>
+            <NavLink className="d-inline p-2 bg-dark text-white" to="/">
+              Home
+            </NavLink>
+            <NavLink className="d-inline p-2 bg-dark text-white" to="/profile">
+              Profile
+            </NavLink>
+            <NavLink className="d-inline p-2 bg-dark text-white" to="/contact">
+              Contact
+            </NavLink>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+    );
+  }
+}
+
+```
+
+2. call into App.js:
+
+```
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
+import { Home } from './components/Home';
+import { Profile } from './components/Profile';
+import { Contact } from './components/Contact';
+import { Menu } from './components/Menu';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
+function App() {
+  return (
+    <BrowserRouter>
+      <div className="container">
+        <Menu />
+        <Switch>
+          <Route path="/" component={Home} exact></Route>
+          <Route path="/contact" component={Contact} exact></Route>
+          <Route path="/profile" component={Profile} exact></Route>
+        </Switch>
+      </div>
+    </BrowserRouter>
+  );
+}
+export default App;
+```
