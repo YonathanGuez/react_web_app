@@ -107,3 +107,11 @@ import { Home } from './components/Home';
 ```
 <Home></Home>
 ```
+
+### Build Routing :
+
+1. install:
+
+```
+yarn add react-router-dom
+```
