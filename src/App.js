@@ -1,19 +1,19 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Button from 'react-bootstrap/Button';
 import { Home } from './components/Home';
-
+import { Profile } from './components/Profile';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 function App() {
   return (
-    <div className="App">
-      <h2>hello</h2>
-      <Button variant="primary">test</Button>
+    <BrowserRouter>
       <div className="container">
-        <Home></Home>
+        <Switch>
+          <Route path="/" component={Home} exact></Route>
+          <Route path="/profile" component={Profile} exact></Route>
+        </Switch>
       </div>
-    </div>
+    </BrowserRouter>
   );
 }
-
 export default App;
