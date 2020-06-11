@@ -74,44 +74,13 @@ import Button from 'react-bootstrap/Button';
 ```
 
 ### Add component:
+[example creation components](https://github.com/YonathanGuez/react_web_app/tree/components)
 
-create folder components links src/components/:
-create in components file Home.js:
-
-```
-import React, { Component } from 'react';
-
-export class Home extends Component {
-  render() {
-    return (
-      <div className="mt-5 d-flex justify-content-left">
-        <h3>dataaaaaaa</h3>
-      </div>
-    );
-  }
-}
-
-```
-
-use this component Home :
-
-1. go to src/App.js:
-   import Home
-
-```
-import { Home } from './components/Home';
-```
-
-2. add my new component:
-
-```
-<Home></Home>
-```
 
 ### Build Routing :
 
-1. install:
+[example creation Route](https://github.com/YonathanGuez/react_web_app/tree/router)
 
-```
-yarn add react-router-dom
-```
+#### Create Menu :
+
+[example creation Menu ](https://github.com/YonathanGuez/react_web_app/tree/menu)
