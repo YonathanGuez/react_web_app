@@ -59,6 +59,10 @@ yarn start
 ```
 
 ### Add bootstrap and use Button:
+Add package:
+```
+yarn add  react-bootstrap bootstrap
+```
 
 index.js :
 
