@@ -91,3 +91,6 @@ import Button from 'react-bootstrap/Button';
 
 ### Create Tableau :
 [example creation Tableau ](https://github.com/YonathanGuez/react_web_app/tree/grid)
+
+### Create litle game Tic tac tok (morpion):
+[example Game JS in react ](https://github.com/YonathanGuez/react_web_app/tree/game_morpion)
