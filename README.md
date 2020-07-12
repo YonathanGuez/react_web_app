@@ -212,3 +212,14 @@ function App() {
 }
 export default App;
 ```
+
+### Create Game Tic Tac Toc (morpion) :
+
+We will build an element Game with components/Game.js
+inside we will have different class Square / Board / Game
+and we will use Game.css for design our Board
+
+into Board we call Square and into game we call Board
+square > Board > Game
+
+and we use the function calculateWinner for manage the party
