@@ -21,6 +21,12 @@ export class Menu extends Component {
             <NavLink className="d-inline p-2 bg-dark text-white" to="/game">
               Game morpion
             </NavLink>
+            <NavLink
+              className="d-inline p-2 bg-dark text-white"
+              to="/testtailwindcss"
+            >
+              test tailwindcss
+            </NavLink>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

@@ -223,3 +223,63 @@ into Board we call Square and into game we call Board
 square > Board > Game
 
 and we use the function calculateWinner for manage the party
+
+### Use tailwindcss for design:
+
+1. package
+
+```
+yarn add tailwindcss postcss-cli autoprefixer -D
+```
+
+2. initialization CSS default
+   Initialize Tailwind CSS by creating the default configurations:
+
+```
+npx tailwind init tailwind.js --full
+```
+
+3. create postcss.config.js on the root
+
+```
+const tailwindcss = require('tailwindcss');
+module.exports = {
+    plugins: [
+        tailwindcss('./tailwind.js'),
+        require('autoprefixer')
+    ],
+};
+```
+
+4. into src create folder assets and tailwind.css and main.css inside:
+   tailwind.css :
+
+```
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+```
+
+    main.css: empty
+
+5. Package.json:
+
+```
+"scripts": {
+    "start": "npm run watch:css && react-scripts start",
+    "build": "npm run build:css && react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "build:css": "postcss src/assets/tailwind.css -o src/assets/main.css",
+    "watch:css": "postcss src/assets/tailwind.css -o src/assets/main.css"
+  },
+
+```
+
+6. into App.js replace import './index.css'; by :
+
+```
+ import './assets/main.css';
+```
