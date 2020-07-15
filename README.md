@@ -283,3 +283,5 @@ module.exports = {
 ```
  import './assets/main.css';
 ```
+
+#### different examples:

@@ -1,0 +1,14 @@
+#dv1 {
+  min-height: 19rem;
+}
+
+#dv2 {
+  transform: scale(-1);
+}
+#dv2bis {
+  transform: scale(1);
+}
+
+.w-full {
+  max-height: 60px;
+}
