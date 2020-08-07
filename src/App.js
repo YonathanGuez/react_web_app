@@ -8,6 +8,7 @@ import { Menu } from './components/Menu';
 import { Game } from './components/Game';
 import { TestTailwindcss } from './components/TestTailwindcss';
 import { AddList } from './components/AddList';
+import { Form } from './components/todo';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
             component={TestTailwindcss}
             exact
           ></Route>
-          <Route path="/addlist" component={AddList} exact></Route>
+          <Route path="/addlist" component={Form} exact></Route>
         </Switch>
       </div>
     </BrowserRouter>
