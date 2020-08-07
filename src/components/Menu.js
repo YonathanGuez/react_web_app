@@ -27,6 +27,9 @@ export class Menu extends Component {
             >
               test tailwindcss
             </NavLink>
+            <NavLink className="d-inline p-2 bg-dark text-white" to="/addlist">
+              addList
+            </NavLink>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

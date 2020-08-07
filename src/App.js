@@ -7,6 +7,7 @@ import { Contact } from './components/Contact';
 import { Menu } from './components/Menu';
 import { Game } from './components/Game';
 import { TestTailwindcss } from './components/TestTailwindcss';
+import { AddList } from './components/AddList';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
             component={TestTailwindcss}
             exact
           ></Route>
+          <Route path="/addlist" component={AddList} exact></Route>
         </Switch>
       </div>
     </BrowserRouter>
