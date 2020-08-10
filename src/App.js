@@ -26,7 +26,7 @@ function App() {
             component={TestTailwindcss}
             exact
           ></Route>
-          <Route path="/addlist" component={Form} exact></Route>
+          <Route path="/addlist" component={AddList} exact></Route>
         </Switch>
       </div>
     </BrowserRouter>
