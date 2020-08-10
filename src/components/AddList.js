@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { Button } from 'react-bootstrap';
 export class AddList extends Component {
   constructor(props) {
     super(props);
@@ -23,6 +23,14 @@ export class AddList extends Component {
     });
   }
 
+  removeItem() {
+    let items = this.state.items;
+    items.pop();
+    this.setState({
+      items,
+    });
+  }
+
   listItems() {
     let items = this.state.items;
     return (
@@ -37,8 +45,17 @@ export class AddList extends Component {
   render() {
     return (
       <div>
-        <input type="text" onChange={(e) => this.onInputChange(e)} />
-        <button onClick={() => this.addItem()}>Add item</button>
+        <input
+          className="input-add"
+          type="text"
+          onChange={(e) => this.onInputChange(e)}
+        />
+        <Button variant="primary" onClick={() => this.addItem()}>
+          Add item
+        </Button>
+        <Button variant="secondary" onClick={() => this.removeItem()}>
+          delete last item
+        </Button>
         {this.listItems()}
       </div>
     );
