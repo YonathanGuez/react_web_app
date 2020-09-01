@@ -9,6 +9,7 @@ import { Game } from './components/Game';
 import { TestTailwindcss } from './components/TestTailwindcss';
 import { AddList } from './components/AddList';
 import { Form } from './components/todo';
+import { Fabric } from './components/Fabric';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
             exact
           ></Route>
           <Route path="/addlist" component={AddList} exact></Route>
+          <Route path="/fabricjs" component={Fabric} exact></Route>
         </Switch>
       </div>
     </BrowserRouter>

@@ -30,6 +30,9 @@ export class Menu extends Component {
             <NavLink className="d-inline p-2 bg-dark text-white" to="/addlist">
               addList
             </NavLink>
+            <NavLink className="d-inline p-2 bg-dark text-white" to="/fabricjs">
+              Fabricjs
+            </NavLink>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
