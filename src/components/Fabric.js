@@ -8,6 +8,11 @@ export class Fabric extends Component {
   state = {
     canvas: this.canvas,
   };
+  getSelection() {
+    return this.state.canvas.getActiveObject() == null
+      ? this.state.canvas.getActiveGroup()
+      : this.state.canvas.getActiveObject();
+  }
   componentDidMount() {
     this.state.canvas = new fabric.Canvas('canvas');
   }
@@ -22,6 +27,13 @@ export class Fabric extends Component {
       })
     );
   }
+
+  // remove
+  RemoveObject() {
+    var objects = this.state.canvas.getActiveObject();
+    //console.log(objects);
+    this.state.canvas.remove(objects);
+  }
   render() {
     return (
       <div>
@@ -30,6 +42,9 @@ export class Fabric extends Component {
         </div>
         <div className="mt-5 d-flex justify-content-center">
           <button onClick={() => this.Addtext()}>Add Texto</button>
+        </div>
+        <div className="mt-5 d-flex justify-content-center">
+          <button onClick={() => this.RemoveObject()}>select and delete</button>
         </div>
         <div className="mt-5 d-flex justify-content-center">
           <div className="post-canvas">
