@@ -8,12 +8,15 @@
     "@testing-library/user-event": "^7.1.2",
     "bootstrap": "^4.5.0",
     "fabric": "^4.1.0",
+    "konva": "^7.0.6",
     "prettier": "^2.0.5",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",
+    "react-konva": "^16.13.0-6",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "use-image": "^1.0.6"
   },
   "scripts": {
     "start": "npm run watch:css && react-scripts start",

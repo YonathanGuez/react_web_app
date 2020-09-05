@@ -10,6 +10,7 @@ import { TestTailwindcss } from './components/TestTailwindcss';
 import { AddList } from './components/AddList';
 import { Form } from './components/todo';
 import { Fabric } from './components/Fabric';
+import { KonvaJS } from './components/Konva';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
           ></Route>
           <Route path="/addlist" component={AddList} exact></Route>
           <Route path="/fabricjs" component={Fabric} exact></Route>
+          <Route path="/konva" component={KonvaJS} exact></Route>
         </Switch>
       </div>
     </BrowserRouter>
