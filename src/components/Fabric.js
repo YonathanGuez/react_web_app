@@ -17,12 +17,13 @@ export class Fabric extends Component {
 
   componentDidMount() {
     this.state.canvas = new fabric.Canvas('canvas');
-    this.chooseBackground();
+    this.Background();
   }
-  chooseBackground() {
+
+  Background() {
     //set Background
     this.state.canvas.setBackgroundImage(
-      'http://fabricjs.com/assets/jail_cell_bars.png',
+      'https://t1.pixers.pics/img-c676e9e9/posters-sans-soudure-de-fond-de-carte-d-39-invitation.jpg?H4sIAAAAAAAAA42QW27EIAxFt5NIydghOIEsYH5nCREEmKbNAwFtR119oa36V6myLD9kH-saXo-onIXFHskG2FdjNgtu3XIVp2Dj-mErbIhkPeXuViFiPZ1vNizh9FVL2LRcNEOH2Vk9vau8uKvwUj2l5OMEEPuLXx-ZlsMSYdkjMOxGQAEkhVTMMYlcdLNvY1KHUcFk6oPw4o97g8X-jxXQIZA2nR60MMi1mBkrsPaX8IXtZdEkCvpH44jYjEVbCuteZbFnnk7Vs7_X8MfN7xzyFlxvQAwGCT0Bl6U1X2_EBtkTl7MYSI9y0TRqLmT-Uy-cWwx3zhBjji75yidFMlS3iQEAAA==',
       this.state.canvas.renderAll.bind(this.state.canvas),
       {
         backgroundImageOpacity: 0.5,
@@ -65,14 +66,6 @@ export class Fabric extends Component {
     let json = JSON.stringify(this.state.canvas);
     console.log(json);
   }
-  // save image
-  // saveImage(e) {
-  //   this.href = this.state.canvas.toDataURL({
-  //     format: 'png',
-  //     quality: 0.8,
-  //   });
-  //   this.download = 'custom.png';
-  // }
 
   _handleImageChange(e) {
     e.preventDefault();
@@ -148,7 +141,6 @@ export class Fabric extends Component {
               width="400"
               height="400"
             />
-            <div className="imgPreview">{$imagePreview}</div>
           </div>
         </div>
       </div>
