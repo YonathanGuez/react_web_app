@@ -12,7 +12,7 @@ import { Form } from './components/todo';
 import { Fabric } from './components/Fabric';
 import { KonvaJS } from './components/Konva';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-
+import { colorPiking } from './components/color';
 function App() {
   return (
     <BrowserRouter>
@@ -31,6 +31,7 @@ function App() {
           <Route path="/addlist" component={AddList} exact></Route>
           <Route path="/fabricjs" component={Fabric} exact></Route>
           <Route path="/konva" component={KonvaJS} exact></Route>
+          <Route path="/color" component={colorPiking} exact></Route>
         </Switch>
       </div>
     </BrowserRouter>
