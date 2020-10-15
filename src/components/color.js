@@ -28,7 +28,6 @@ export class colorPiking extends Component {
             type="color"
             value={this.state.color}
             onChange={this.handleChange}
-            className="hidden"
           />
         </label>
       </div>
